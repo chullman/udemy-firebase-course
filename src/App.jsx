@@ -4,6 +4,9 @@ import Home from "./routes/Home";
 import Login from "./routes/Login";
 import ErrorPage from "./error-page";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import StateContext from "./utils/StateContext";
+import { useReducer } from "react";
+import reducer from "./utils/StateReducer";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +27,17 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  const initialState = {
+    user: null,
+  };
+
+  const [store, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <StateContext.Provider value={{ store, dispatch }}>
+      <RouterProvider router={router} />
+    </StateContext.Provider>
+  );
 }
 
 export default App;
