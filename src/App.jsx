@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import FirebaseAuthState from "./components/FirebaseAuthState";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <StateContext.Provider value={{ store, dispatch }}>
+      <FirebaseAuthState />
       <RouterProvider router={router} />
     </StateContext.Provider>
   );
