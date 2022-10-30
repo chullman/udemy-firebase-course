@@ -3,8 +3,8 @@ import Layout from "./routes/Layout";
 import Home from "./routes/Home";
 import Login from "./routes/Login";
 import ErrorPage from "./error-page";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import StateContext from "./utils/StateContext";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { StateContext } from "./utils/StateContext";
 import { useReducer } from "react";
 import reducer from "./utils/StateReducer";
 
