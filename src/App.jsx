@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Layout from "./routes/Layout";
-import Home from "./routes/Home";
-import Login from "./routes/Login";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 import ErrorPage from "./error-page";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { StateContext } from "./utils/StateContext";
